@@ -65,3 +65,5 @@ gem 'pry-rails'
 
 gem 'haml-rails'
 
+gem 'rakuten_web_service'
+

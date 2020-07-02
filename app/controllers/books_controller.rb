@@ -9,6 +9,8 @@ class BooksController < ApplicationController
     if @keyword.present?
       apibooks = RakutenWebService::Books::Book.search({title: @keyword, hit: 15})
 
+      binding.pry
+
       apibooks.each do |apibook|
         book = Book.new(change(apibook))
         @books = book
