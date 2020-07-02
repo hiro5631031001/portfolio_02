@@ -26,14 +26,25 @@ class BooksController < ApplicationController
     publisher = apibook['publisherName']
     isbn = apibook['isbn']
     image = apibook['mediumImageUrl']
+    url = apibook['itemUrl']
 
     {
       title: title,
       author: author,
       isbn: isbn,
       publisher: publisher,
-      image: image 
+      image: image,
+      url: url
     }
+  end
+
+  def book_params
+    params.require(:book).permit(:title,
+                                 :author,
+                                 :isbn,
+                                 :publisher,
+                                 :image,
+                                 :url)
   end
 
 end
