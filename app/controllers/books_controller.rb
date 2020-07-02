@@ -3,17 +3,17 @@ class BooksController < ApplicationController
   end
 
   def new
+
     @books = []
 
     @keyword = params[:keyword]
+
     if @keyword.present?
       apibooks = RakutenWebService::Books::Book.search({title: @keyword, hit: 15})
 
-      binding.pry
-
       apibooks.each do |apibook|
         book = Book.new(change(apibook))
-        @books = book
+        @books << book
       end
     end
   end
@@ -29,6 +29,7 @@ class BooksController < ApplicationController
 
     {
       title: title,
+      author: author,
       isbn: isbn,
       publisher: publisher,
       image: image 
