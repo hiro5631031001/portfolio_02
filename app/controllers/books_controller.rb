@@ -18,6 +18,13 @@ class BooksController < ApplicationController
     end
   end
 
+  def create
+    @book = Book.new(book_params)
+      binding.pry
+    @book.save
+    redirect_to root_path
+  end
+
   private 
 
   def change(apibook)
@@ -39,12 +46,12 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:title,
-                                 :author,
-                                 :isbn,
-                                 :publisher,
-                                 :image,
-                                 :url)
+    params.permit(:title,
+                  :author,
+                  :isbn,
+                  :publisher,
+                  :image,
+                  :url)
   end
 
 end
