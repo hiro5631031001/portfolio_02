@@ -5,14 +5,11 @@ class BooksController < ApplicationController
   end
 
   def new
-
     @books = []
-
     @keyword = params[:keyword]
 
     if @keyword.present?
       apibooks = RakutenWebService::Books::Book.search({title: @keyword, hit: 15})
-
       apibooks.each do |apibook|
         book = Book.new(change(apibook))
         @books << book
@@ -30,7 +27,15 @@ class BooksController < ApplicationController
     end
   end
 
+  def show
+    @book = Book.find(params[:id])
+  end
 
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    redirect_to root_path
+  end
 
   private 
 
