@@ -1,0 +1,18 @@
+.show_book_wrapper {
+  .show_book_main {
+    margin-top: 40px;
+    .show_book_box {
+      display: flex;
+      &__left {
+        margin-right: 28px;
+      }
+      &__right {
+        .book_delete_btn {
+          margin-top: 20px;
+        }
+        
+      }
+
+    }
+  }
+}

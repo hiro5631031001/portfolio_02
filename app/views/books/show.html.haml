@@ -1,13 +1,18 @@
 .show_book_wrapper 
   .show_book_main
     .show_book_box
-      .book_image
-        = image_tag @book.image, alt: '', height: '150', width: '100', class: ''
-      .book_titile
-        = @book.title
-      .book_author
-        = @book.author
-      = link_to book_path(@book), method: :delete, data: { confirm: '削除しますか？' } do
-        削除する
+      .show_book_box__left
+        .book_image
+          = image_tag @book.image, alt: '', height: '150', width: '100', class: ''
+      .show_book_box__right
+        .book_titile
+          = @book.title
+        .book_author
+          = @book.author
+        .book_publisher
+          = @book.publisher
+        .book_delete_btn
+          = link_to book_path(@book), method: :delete, class: "btn btn-primary btn-sm bg-danger ", data: { confirm: '削除しますか？' } do
+            本棚から削除する
     
        
