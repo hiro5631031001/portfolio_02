@@ -70,3 +70,5 @@ gem 'erb2haml'
 gem 'rakuten_web_service'
 
 gem 'devise'
+
+gem 'bootstrap'
