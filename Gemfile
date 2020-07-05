@@ -67,3 +67,5 @@ gem 'haml-rails'
 
 gem 'rakuten_web_service'
 
+gem 'devise'
+
