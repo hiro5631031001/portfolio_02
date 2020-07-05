@@ -63,7 +63,7 @@ class BooksController < ApplicationController
                   :isbn,
                   :publisher,
                   :image,
-                  :url)
+                  :url).merge(user_id: current_user.id)
   end
 
 end
