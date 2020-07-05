@@ -3,11 +3,12 @@
     margin-top: 40px;
     .show_book_box {
       display: flex;
+      padding: 20px;
       &__left {
         margin-right: 28px;
       }
       &__right {
-        .book_delete_btn {
+        .book_btn {
           margin-top: 20px;
         }
         

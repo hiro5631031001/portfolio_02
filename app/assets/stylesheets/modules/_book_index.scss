@@ -1,12 +1,25 @@
-.book_show_wrapper {
+.search-box {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
   margin-top: 40px;
-  .book_show_main {
+  &__title {
+    .form-group {
+      margin-top: 12px;
+    }
+  }
+}
+
+.book_index_wrapper {
+  margin-top: 40px;
+  .book_index_main {
     width: 90%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     .book_box {
       margin-right: 20px;
+      padding: 20px;
     }
   }
 }
