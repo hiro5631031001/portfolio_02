@@ -1,8 +1,8 @@
 .header
   .header__main
-    .app_title
-      sharebook
-    %ul.user-box
+    .app_title.text-white
+      = link_to "Sharebook", root_path , class: "text-white"
+    %ul.user-box.nav.nav-pills
       - if user_signed_in?
         -# %li.user-list
         -#   = link_to "マイページ",user_path(current_user.id)
