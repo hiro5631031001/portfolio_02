@@ -1,0 +1,12 @@
+.book_show_wrapper {
+  margin-top: 40px;
+  .book_show_main {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    .book_box {
+      margin-right: 20px;
+    }
+  }
+}

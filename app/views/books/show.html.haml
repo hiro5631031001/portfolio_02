@@ -1,0 +1,13 @@
+.show_book_wrapper 
+  .show_book_main
+    .show_book_box
+      .book_image
+        = image_tag @book.image, alt: '', height: '150', width: '100', class: ''
+      .book_titile
+        = @book.title
+      .book_author
+        = @book.author
+      = link_to book_path(@book), method: :delete, data: { confirm: '削除しますか？' } do
+        削除する
+    
+       

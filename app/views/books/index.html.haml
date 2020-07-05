@@ -1,0 +1,18 @@
+.search-box
+  .serch-box__title
+    追加したい本を検索してみよう
+    = form_with url: new_book_path, method: :get, local: true do |f|
+      .form-group
+        = f.text_field :keyword, class: ""
+        = f.submit '本の題名を検索', class: ""
+
+.book_show_wrapper
+  .book_show_main
+    - @books.each do |book|
+      = link_to book_path(book) do
+        .book_box
+          .book_detail
+            = book.title
+          .book_detail
+            = image_tag book.image , alt: '', height: '120', width: '80', class: ''
+
