@@ -4,6 +4,10 @@
 }
 
 @import "reset";
+@import "bootstrap"; 
 @import "modules/common";
 @import "modules/header";
-@import "modules/book_index"
+@import "modules/book_index";
+@import "modules/books_show";
+@import "modules/books_new";
+@import "modules/user_signup"

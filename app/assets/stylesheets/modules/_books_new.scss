@@ -1,0 +1,18 @@
+.book-new-wrapper {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  .new_book_box {
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    margin: 12px;
+    .book_detail {
+      font-size: 8px;
+      .btn {
+        margin-top: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.show_book_wrapper {
+  .show_book_main {
+    margin-top: 40px;
+    width: 500px;
+    .show_book_box {
+      display: flex;
+      padding: 20px;
+      &__left {
+        margin-right: 28px;
+      }
+      &__right {
+        .book_btn {
+          margin-top: 20px;
+          margin-right: 20px;
+        }
+        
+      }
+
+    }
+  }
+}
