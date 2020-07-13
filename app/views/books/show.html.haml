@@ -18,7 +18,7 @@
   
   .comment-form
     - if current_user
-      = form_with model:@comment, local: true do |f|
+      = form_with model:[@book, @comment], local: true do |f|
         .form-group
           = f.text_area :text, placeholder: "書籍を読んでコメントを入力しよう", row: "5"
     
