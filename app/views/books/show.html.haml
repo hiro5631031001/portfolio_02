@@ -15,5 +15,11 @@
           = link_to "楽天市場商品ページ",@book.url, class: 'btn btn-info btn-sm'
           = link_to book_path(@book), method: :delete, class: "btn btn-secondary btn-sm", data: { confirm: '削除しますか？' } do
             本棚から削除する
+  
+  .comment-form
+    - if current_user
+      = form_with model:@comment, local: true do |f|
+        .form-group
+          = f.text_area :text, placeholder: "書籍を読んでコメントを入力しよう", row: "5"
     
        
