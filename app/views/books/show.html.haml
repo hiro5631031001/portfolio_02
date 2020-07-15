@@ -22,5 +22,13 @@
         .comment-area
           = f.text_area :text, placeholder: "コメントを入力してみよう", class: "form-control"
           = f.submit "SEND",class: "btn-primary"
+  
+  .comments-index
+    - @comments.each do |comment|
+      .comment-index__text
+        = comment.text
+      .comment-index__nickname
+        = comment.user.nickname
+
     
        
