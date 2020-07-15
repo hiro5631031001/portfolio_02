@@ -24,11 +24,16 @@
           = f.submit "SEND",class: "btn-primary"
   
   .comments-index
+    <コメント一覧>
     - @comments.each do |comment|
-      .comment-index__text
-        = comment.text
-      .comment-index__nickname
-        = comment.user.nickname
+      .comment
+        .comment__nickname
+          = comment.user.nickname 
+        .commnet__pause
+          = ":"
+        .comment__text
+          = comment.text
+        
 
     
        
