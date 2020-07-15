@@ -18,4 +18,17 @@
 
     }
   }
+
+  .comment-form {
+    margin-top: 50px;
+    width: 500px;
+    .comment-area {
+      .btn-primary {
+        margin: 0 auto;
+        margin-top: 20px;
+        height: 30px;
+        width: 150px;
+      }
+    }
+  }
 }
